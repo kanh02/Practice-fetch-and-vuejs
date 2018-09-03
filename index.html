@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="www.discoverychannel.es/"> Travel and Living</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="http://www.booking.es/Hoteles" target="_blank">Hotel ?</a></li>
+        <li><a href="www.europcar.es" target="_blank">Renting Car ?</a></li>
+        <li><a href="www.skyscanner.es" target="_blank">Fligths ?</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body style="background:#c0ded9">
+	<div class="text-center" id="app" >
+		<div class="col-md-12" >
+		<div>
+			<h1>Travel Guide for Beginners</h1>
+			<img src="images/vuelo.jpg" class="img-rounded" alt="vuelo" width="300" height="150">
+		</div>
+		<div class="col-sm-4">
+			<h1>Select City to Travel</h1>
+			<p><span class="glyphicon glyphicon-search"></span></p>
+			<form name="formulario">
+			<select v-model="selected" id="cities" name="cities" @change="getCity">
+				<option v-for="option in options"  name="options" >
+					{{ option.city }}
+				</option>
+			</select>
+				</form>
+		</div>
+		<div class="col-sm-4">
+				<div v-if="mensaje == 'temperature is cold'">
+				<img src="images/cloud.jpg" width="250" height="165" name="uno">
+				</div>
+				<div v-if="mensaje == 'temperature is sunny'">
+				<img src="images/sun2.jpg" width="250" height="165" name="dos">
+				</div>
+		</div>
+		<div class="col-sm-4">
+			<table class="table table-hover"  >
+				<tr class="success">
+					<td>Weather</td>
+					<td>{{mensaje}}</td>
+				</tr>
+				<tr class="info">
+					<td>City</td>
+					<td>{{cityname}}</td>
+				</tr>
+				<tr class="danger" >
+					<td>Temp.Max.</td>
+					<td>{{max}}ºC</td>
+				</tr>
+				<tr>
+					<td>Temp.Min.</td>
+					<td>{{min}}ºC</td>
+				</tr>
+				<tr class="warning">
+					<td>Humidity</td>
+					<td>{{humy}}%</td>
+				</tr>
+
+			</table>
+		</div>
+	
+		<div>
+			<h2>Local Food Recomendation</h2>
+
+<!--				<img src= "option.value" class="img-rounded"  width="200" height="150">-->
+			
+			<div v-if="one == 'Madrid'"><h3 class="text-center" >Madrid:</h3><p>Cocido Madrileño</p><img src="images/CocidoMadrile%C3%B1o.jpg"></div>
+
+			<div v-if="one == 'London' "><h3 class="text-center" > London: </h3><p>Fish and Chips</p><img src="images/fish_chips.jpg"></div>
+			
+			<div v-if="one == 'Paris' "><h3 class="text-center" > Paris: </h3><p>Soupe a L'Oignon</p><img src="images/Onion_soup.jpg"></div>
+			
+			<div v-if="one == 'Port' "><h3 class="text-center" > Port: </h3><p>Francesinhas</p><img src="images/francesinha.jpg"></div>
+			
+			<div v-if="one == 'Rome' "><h3 class="text-center" > Rome: </h3><p>Gnocchi</p><img src="images/gnocchi.jpg"></div>
+			
+			<div v-if="one == 'Athens' "><h3 class="text-center" > Athens: </h3><p>Tzatziki</p><img src="images/Tzatsiki.jpg"></div>
+			
+			<div v-if="one == 'Berlin' "><h3 class="text-center" > Berlin: </h3><p>Eisbein</p><img src="images/eisbein.jpg"></div>
+			
+			<div v-if="one == 'Vienna' "><h3 class="text-center" > Vienna: </h3><p>Wiener Schnitzel</p><img src="images/Wiener_Schnitzel.JPG"></div>
+			
+			<div v-if="one == 'Moscow' "><h3 class="text-center" > Moscow: </h3><p>Borsch</p><img src="images/Borsch.jpg"></div>
+			<div v-if="one == 'Helsinki'"><h3 class="text-center" > Helsinki: </h3><p>Kalakukko</p><img src="images/kalakukko.jpg"></div>
+
+
+		</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="weather.js"></script>
+	<footer class="container-fluid text-center">
+		<h6 class="text-center"> &copy; 2018 | All Rigths Reserved</h6>
+	</footer>
+</body>
+
+</html>
