@@ -24,12 +24,15 @@
   </div>
 </nav>
 
-<body style="background:#c0ded9">
+<body style="background-color: skyblue">
+	<div class="container" style="border: 1px;">
 	<div class="text-center" id="app" >
-		<div class="col-md-12" >
+		<div class="col-md-12" style="background-color: chocolate">
 		<div>
+			<div>
 			<h1>Travel Guide for Beginners</h1>
 			<img src="images/vuelo.jpg" class="img-rounded" alt="vuelo" width="300" height="150">
+			</div>
 		</div>
 		<div class="col-sm-4">
 			<h1>Select City to Travel</h1>
@@ -43,12 +46,14 @@
 				</form>
 		</div>
 		<div class="col-sm-4">
+			<div style="align-items: stretch">
 				<div v-if="mensaje == 'temperature is cold'">
 				<img src="images/cloud.jpg" width="250" height="165" name="uno">
 				</div>
 				<div v-if="mensaje == 'temperature is sunny'">
 				<img src="images/sun2.jpg" width="250" height="165" name="dos">
 				</div>
+			</div>
 		</div>
 		<div class="col-sm-4">
 			<table class="table table-hover"  >
@@ -64,7 +69,7 @@
 					<td>Temp.Max.</td>
 					<td>{{max}}ºC</td>
 				</tr>
-				<tr>
+				<tr class="info">
 					<td>Temp.Min.</td>
 					<td>{{min}}ºC</td>
 				</tr>
@@ -79,26 +84,27 @@
 		<div>
 			<h2>Local Food Recomendation</h2>
 
-<!--				<img src= "option.value" class="img-rounded"  width="200" height="150">-->
-			
-			<div v-if="one == 'Madrid'"><h3 class="text-center" >Madrid:</h3><p>Cocido Madrileño</p><img src="images/CocidoMadrile%C3%B1o.jpg"></div>
+			<div>
+			<div v-if="one == 'Madrid'"><h3 class="text-center" >Madrid:</h3><p>Cocido Madrileño</p><img src="images/CocidoMadrile%C3%B1o.jpg" width="350" height="265"></div>
 
-			<div v-if="one == 'London' "><h3 class="text-center" > London: </h3><p>Fish and Chips</p><img src="images/fish_chips.jpg"></div>
+			<div v-if="one == 'London' "><h3 class="text-center" > London: </h3><p>Fish and Chips</p><img src="images/fish_chips.jpg" width="350" height="265"></div>
 			
-			<div v-if="one == 'Paris' "><h3 class="text-center" > Paris: </h3><p>Soupe a L'Oignon</p><img src="images/Onion_soup.jpg"></div>
+			<div v-if="one == 'Paris' "><h3 class="text-center" > Paris: </h3><p>Soupe a L'Oignon</p><img src="images/Onion_soup.jpg" width="350" height="265"></div>
 			
-			<div v-if="one == 'Port' "><h3 class="text-center" > Port: </h3><p>Francesinhas</p><img src="images/francesinha.jpg"></div>
+			<div v-if="one == 'Port' "><h3 class="text-center" > Port: </h3><p>Francesinhas</p><img src="images/francesinha.jpg" width="350" height="265"></div>
 			
-			<div v-if="one == 'Rome' "><h3 class="text-center" > Rome: </h3><p>Gnocchi</p><img src="images/gnocchi.jpg"></div>
+			<div v-if="one == 'Rome' "><h3 class="text-center" > Rome: </h3><p>Gnocchi</p><img src="images/gnocchi.jpg" width="350" height="265"></div>
 			
-			<div v-if="one == 'Athens' "><h3 class="text-center" > Athens: </h3><p>Tzatziki</p><img src="images/Tzatsiki.jpg"></div>
+			<div v-if="one == 'Athens' "><h3 class="text-center" > Athens: </h3><p>Tzatziki</p><img src="images/Tzatsiki.jpg" width="350" height="265"></div>
 			
-			<div v-if="one == 'Berlin' "><h3 class="text-center" > Berlin: </h3><p>Eisbein</p><img src="images/eisbein.jpg"></div>
+			<div v-if="one == 'Berlin' "><h3 class="text-center" > Berlin: </h3><p>Eisbein</p><img src="images/eisbein.jpg" width="350" height="265"></div>
 			
-			<div v-if="one == 'Vienna' "><h3 class="text-center" > Vienna: </h3><p>Wiener Schnitzel</p><img src="images/Wiener_Schnitzel.JPG"></div>
+			<div v-if="one == 'Vienna' "><h3 class="text-center" > Vienna: </h3><p>Wiener Schnitzel</p><img src="images/Wiener_Schnitzel.JPG" width="350" height="265"></div>
 			
-			<div v-if="one == 'Moscow' "><h3 class="text-center" > Moscow: </h3><p>Borsch</p><img src="images/Borsch.jpg"></div>
-			<div v-if="one == 'Helsinki'"><h3 class="text-center" > Helsinki: </h3><p>Kalakukko</p><img src="images/kalakukko.jpg"></div>
+			<div v-if="one == 'Moscow' "><h3 class="text-center" > Moscow: </h3><p>Borsch</p><img src="images/Borsch.jpg" width="350" height="265"></div>
+				
+			<div v-if="one == 'Helsinki'"><h3 class="text-center" > Helsinki: </h3><p>Kalakukko</p><img src="images/kalakukko.jpg" width="350" height="265"></div>
+		</div>
 
 
 		</div>
@@ -109,6 +115,7 @@
 	<footer class="container-fluid text-center">
 		<h6 class="text-center"> &copy; 2018 | All Rigths Reserved</h6>
 	</footer>
+	</div>
 </body>
 
 </html>
