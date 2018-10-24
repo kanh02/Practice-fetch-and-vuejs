@@ -67,7 +67,7 @@ var app = new Vue({
 
 	},
 	created: function () {
-		this.getCity()
+//		this.getCity()
 
 	},
 	methods: {
@@ -82,10 +82,9 @@ var app = new Vue({
 
 			this.one = document.formulario.cities.value;
 			console.log(this.one)
+
 			city = this.one;
-			if(city != null){
-				city ="London";
-			}
+
 			
 
 

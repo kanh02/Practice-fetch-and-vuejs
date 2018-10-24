@@ -43,10 +43,9 @@
 
 		<div id="selector">
 			<h1>Travel Guide for Beginners</h1>
-			<!--			<p>Select City to Travel</p>-->
 			<p><span class="glyphicon glyphicon-search"></span>Select City to Travel</p>
 			<form name="formulario">
-				<select v-model="selected" id="cities" name="cities" @change="getCity">
+				<select   v-model="selected" id="cities" name="cities" @change="getCity">
 					<option v-for="option in options" name="options">
 						{{ option.city }}
 					</option>
